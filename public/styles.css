@@ -488,10 +488,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: inline-block;
 }
 
-.w-80{
-  width: 20rem;
-}
-
 .items-start{
   align-items: flex-start;
 }
@@ -619,4 +615,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .body{
   height: 100vh;
+}
+
+@media (min-width: 768px){
+  .md\:w-80{
+    width: 20rem;
+  }
 }
