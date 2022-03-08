@@ -4,7 +4,6 @@ import {
     useMutation
 } from "@apollo/client";
 import {useState} from "react";
-import {queries} from "@testing-library/react";
 
 const GET_TODOS = gql`
 query getTodos {
