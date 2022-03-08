@@ -1,13 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {
+    ApolloClient,
+    InMemoryCache,
+    ApolloProvider,
+    ApolloLink,
+    gql
+} from "@apollo/client";
+
+const client = new ApolloClient({
+    cache: new InMemoryCache(),
+    uri: "https://tolerant-seal-67.hasura.app/v1/graphql",
+    headers: {
+        "x-hasura-admin-secret" : "0lhfwXYK3u33jbeo0ayAz7X0XEKfbTVyWgxgT0v8a9CNJ5MZ8WWSeMT1EvAeID4k"
+    }
+})
+
 ReactDOM.render(
-  <React.StrictMode>
+  <ApolloProvider client={client}>
     <App />
-  </React.StrictMode>,
+  </ApolloProvider>,
   document.getElementById('root')
 );
 
