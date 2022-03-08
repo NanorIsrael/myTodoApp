@@ -62,7 +62,7 @@ function App() {
      e.preventDefault();
      if(!todo.trim()) return;
      await addToDo({variables: {text: todo}, refetchQueries: [{
-         queries: GET_TODOS}]
+         query: GET_TODOS}]
      });
      setTodo(' ');
  }
