@@ -85,7 +85,7 @@ function App() {
         <div  className=" justify-center text-center">
             <h1 className={'text-header1 font-bold border-b-2 border-white'} >My check list</h1>
             <form className={'p-4'}>
-                <input type={"text"} placeholder={"add todo to list..."} value={todo} className={'rounded-full p-2 w-80 font-bold text-primary'} onChange={(e) => setTodo(e.target.value)}/>
+                <input type={"text"} placeholder={"add todo to list..."} value={todo} className={'rounded-full p-2 md:w-80 font-bold text-primary'} onChange={(e) => setTodo(e.target.value)}/>
                 <button type={"submit"} className={'ml-2 border-2 border-gray-600 p-2 bg-white text-primary px-4 shadow rounded'} onClick={addTodo}>create</button>
             </form>
             <div className={'mb-6'}>
