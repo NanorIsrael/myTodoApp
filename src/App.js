@@ -64,7 +64,7 @@ function App() {
      await addToDo({variables: {text: todo}, refetchQueries: [{
          query: GET_TODOS}]
      });
-     setTodo(' ');
+     setTodo("");
  }
  const toggleToDo = async (todo) => {
      await toggleTodo({variables: { id: todo.id, done: !todo.done}});
